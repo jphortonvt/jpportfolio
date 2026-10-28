@@ -10,8 +10,17 @@ npm run build      # static site in dist/
 npm run deploy     # build for GitHub Pages and push to the gh-pages branch
 ```
 
-Ruled is linked from `../design-system`, so building needs that folder next to
-this one. That is also why deploys run locally rather than in GitHub Actions.
+Ruled is vendored in `vendor/ruled`, so a fresh clone builds on its own —
+locally, on Cloudflare, anywhere. After changing the design system in
+`../design-system`, run `npm run sync-ruled` and commit `vendor/ruled`.
+
+## Deploying
+
+- **Cloudflare** (Workers static assets, `wrangler.jsonc`): connect the repo;
+  build command `npm run build`, deploy command `npx wrangler deploy`. Node 22
+  is pinned in `.node-version`. Every push to `main` deploys.
+- **GitHub Pages**: `npm run deploy` builds with the `/portfolio/` base path and
+  force-pushes `dist/` to the `gh-pages` branch.
 
 ## Adding a project
 
@@ -49,6 +58,7 @@ themselves.
 | `src/components/ProjectSection.tsx` | The section template every project uses |
 | `src/components/visuals/` | Per-project live illustrations |
 | `src/styles/site.css` | Portfolio styles on top of Ruled |
+| `vendor/ruled/` | Vendored copy of the Ruled design system |
 
-Ruled is linked from `../design-system` (`file:` dependency), so changes there
-show up here on the next dev-server reload.
+Ruled comes from `vendor/ruled` (a copy of `../design-system`; refresh it with
+`npm run sync-ruled`).

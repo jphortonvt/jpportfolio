@@ -1,0 +1,1 @@
+Vendored from design-system@285755b. Edit there, then run npm run sync-ruled.

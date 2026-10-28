@@ -9,10 +9,11 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "deploy": "bash scripts/deploy.sh"
+    "deploy": "bash scripts/deploy.sh",
+    "sync-ruled": "bash scripts/sync-ruled.sh"
   },
   "dependencies": {
-    "@ruled/design-system": "file:../design-system",
+    "@ruled/design-system": "file:./vendor/ruled",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },

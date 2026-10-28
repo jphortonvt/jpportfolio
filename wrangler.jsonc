@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers static assets: serve the Vite build from dist/.
+  // Build command: npm run build   ·   Deploy command: npx wrangler deploy
+  "name": "portfolio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

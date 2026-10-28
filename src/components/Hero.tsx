@@ -25,7 +25,7 @@ export function Hero({ projects }: { projects: Project[] }) {
         <div className="hero-copy">
           <h1 id="hero-title" className="r-display-xl">Things<br />I've built.</h1>
           <p className="r-body-lg hero-intro">
-            A running index of my projects. Each one gets its own section and its own two-colour palette.
+            A running index of my personal projects.
           </p>
         </div>
       </Cell>

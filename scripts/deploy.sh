@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # Build the site for GitHub Pages and push it to the gh-pages branch.
-# Runs locally because Ruled is linked from ../design-system, which GitHub's
-# servers can't see.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
