@@ -7,7 +7,6 @@ design system. Each project gets its own section and its own two-colour theme.
 npm install
 npm run dev        # http://localhost:5190
 npm run build      # static site in dist/
-npm run deploy     # build for GitHub Pages and push to the gh-pages branch
 ```
 
 Ruled is vendored in `vendor/ruled`, so a fresh clone builds on its own —
@@ -16,11 +15,9 @@ locally, on Cloudflare, anywhere. After changing the design system in
 
 ## Deploying
 
-- **Cloudflare** (Workers static assets, `wrangler.jsonc`): connect the repo;
-  build command `npm run build`, deploy command `npx wrangler deploy`. Node 22
-  is pinned in `.node-version`. Every push to `main` deploys.
-- **GitHub Pages**: `npm run deploy` builds with the `/portfolio/` base path and
-  force-pushes `dist/` to the `gh-pages` branch.
+**Cloudflare** (Workers static assets, `wrangler.jsonc`): connect the repo;
+build command `npm run build`, deploy command `npx wrangler deploy`. Node 22
+is pinned in `.node-version`. Every push to `main` deploys.
 
 ## Adding a project
 

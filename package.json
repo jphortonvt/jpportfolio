@@ -9,7 +9,6 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "deploy": "bash scripts/deploy.sh",
     "sync-ruled": "bash scripts/sync-ruled.sh"
   },
   "dependencies": {
