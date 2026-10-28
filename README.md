@@ -16,7 +16,8 @@ locally, on Cloudflare, anywhere. After changing the design system in
 ## Deploying
 
 **Cloudflare** (Workers static assets, `wrangler.jsonc`): connect the repo;
-build command `npm run build`, deploy command `npx wrangler deploy`. Node 22
+build command `npm run build`, deploy command `npm run deploy` (runs
+`wrangler deploy`). Node 22
 is pinned in `.node-version`. Every push to `main` deploys.
 
 ## Adding a project

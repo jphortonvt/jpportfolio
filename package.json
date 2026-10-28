@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "sync-ruled": "bash scripts/sync-ruled.sh"
+    "sync-ruled": "bash scripts/sync-ruled.sh",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@ruled/design-system": "file:./vendor/ruled",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "typescript": "^7.0.2",
-    "vite": "^8.3.4"
+    "vite": "^8.3.4",
+    "wrangler": "^4.154.0"
   }
 }
