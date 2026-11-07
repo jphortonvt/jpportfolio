@@ -34,8 +34,12 @@ export interface Project {
   facts?: { value: string; label: string }[];
   /** Optional live illustration shown in the section */
   Visual?: ComponentType;
-  /** Buttons under the tagline; the first is the call to action, in the project's accent */
-  links?: { label: string; href: string }[];
+  /**
+   * Buttons under the tagline; the first is the call to action, in the
+   * project's accent. A link with an icon shows only the icon (label becomes
+   * its accessible name).
+   */
+  links?: { label: string; href: string; icon?: 'github' }[];
 }
 
 // To add a project: append an entry. Order here is the order on the page.
@@ -66,7 +70,7 @@ export const projects: Project[] = [
     Visual: MixerVisual,
     links: [
       { label: 'See demo', href: 'https://webmixer-mvap.onrender.com/demo' },
-      { label: 'Code on GitHub', href: 'https://github.com/jphortonvt/Webmixer' },
+      { label: 'Code on GitHub', href: 'https://github.com/jphortonvt/Webmixer', icon: 'github' },
     ],
   },
   {
