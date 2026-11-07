@@ -31,6 +31,22 @@ export function ProjectSection({ project, index }: { project: Project; index: nu
       <Cell col={[4, 13]} pad="lg" layout="stack" style={{ gap: 18 }}>
         <h2 id={`${project.id}-title`} className="project-title">{project.name}</h2>
         <p className="r-body-lg" style={{ maxWidth: 640 }}>{project.tagline}</p>
+        {project.links?.length ? (
+          <div className="r-button-group project-links">
+            {project.links.map((l, i) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={i === 0 ? 'r-button project-cta' : 'r-button'}
+              >
+                {l.label}
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        ) : null}
       </Cell>
 
       {/* Visual + facts (no facts: the visual takes the whole row) */}
@@ -70,13 +86,6 @@ export function ProjectSection({ project, index }: { project: Project; index: nu
         <ul className="project-stack">
           {project.stack.map((s) => <li key={s}>{s}</li>)}
         </ul>
-        {project.links?.length ? (
-          <div className="project-links">
-            {project.links.map((l) => (
-              <a key={l.href} href={l.href} className="r-link r-body">{l.label}</a>
-            ))}
-          </div>
-        ) : null}
       </Cell>
     </Grid>
   );

@@ -34,6 +34,7 @@ export interface Project {
   facts?: { value: string; label: string }[];
   /** Optional live illustration shown in the section */
   Visual?: ComponentType;
+  /** Buttons under the tagline; the first is the call to action, in the project's accent */
   links?: { label: string; href: string }[];
 }
 
@@ -63,6 +64,10 @@ export const projects: Project[] = [
     ],
     stack: ['Node.js', 'Express', 'Web Audio API', 'JavaScript', 'SQLite (sql.js)', 'Backblaze B2', 'ffmpeg', 'Passport + Google OAuth', 'Docker', 'Render', 'Ruled'],
     Visual: MixerVisual,
+    links: [
+      { label: 'See demo', href: 'https://webmixer-mvap.onrender.com/demo' },
+      { label: 'Code on GitHub', href: 'https://github.com/jphortonvt/Webmixer' },
+    ],
   },
   {
     id: 'discogs-sync',

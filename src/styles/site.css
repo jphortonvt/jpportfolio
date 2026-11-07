@@ -106,7 +106,9 @@
   font-family: var(--r-font-family-mono);
   font-size: 12px;
 }
-.project-links { display: flex; flex-wrap: wrap; gap: 16px; }
+/* Call to action under the tagline: the first link is filled with the project accent */
+.project-links { align-self: flex-start; }
+.project-cta { background: var(--p-accent); color: var(--p-accent-ink); font-weight: var(--r-font-weight-medium); }
 
 /* ---------- Web Mixer visual ---------- */
 
@@ -461,6 +463,10 @@
   .sp-runs li { grid-template-columns: 96px minmax(0, 1fr) 56px; gap: 10px; }
   .sp-legend { display: none; }
   .project-highlights li { padding: 14px 16px; }
+  /* Stack the buttons full width rather than letting them wrap into a staircase */
+  .project-links { display: grid; align-self: stretch; }
+  .project-links > .r-button { justify-content: space-between; }
+  .r-button-group.project-links > .r-button + .r-button { border-left: var(--r-rule-width) solid var(--r-color-ink); border-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

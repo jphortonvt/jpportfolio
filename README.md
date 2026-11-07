@@ -43,7 +43,7 @@ themselves.
   stack: ['…'],
   facts: [{ value: '3', label: '…' }],  // optional; without it the visual spans the full width
   Visual: MyProjectVisual,              // optional, in src/components/visuals/
-  links: [{ label: 'GitHub', href: '…' }],  // optional
+  links: [{ label: 'See demo', href: '…' }, { label: 'GitHub', href: '…' }],  // optional; buttons under the tagline, first one in the accent
 }
 ```
 
