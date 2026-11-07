@@ -95,6 +95,9 @@ export const projects: Project[] = [
     ],
     stack: ['Python 3.11', 'Typer', 'FastAPI', 'HTMX', 'Jinja2', 'rapidfuzz', 'ytmusicapi', 'Discogs API', 'Pydantic', 'SQLite', 'pytest'],
     Visual: DiscogsVisual,
+    links: [
+      { label: 'Code on GitHub', href: 'https://github.com/jphortonvt/discogs-sync', icon: 'github' },
+    ],
   },
   {
     id: 'human-llm',
